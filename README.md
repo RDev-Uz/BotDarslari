@@ -1,6 +1,6 @@
 # Telegram Bot (1-dars)
 
-![1-dars_1](/images/1_dars_1.webp)
+![1-dars_1](1_dars_1.webp)
 
 <!-- ---------- -->
 
@@ -15,7 +15,7 @@
 
 ## **Qanday qilib telegram bot ochish mumkin?**
 1. Dastlab [@BotFather](https://t.me/BotFather)'ni telegramdagi qidiruv qismidan qidirib olamiz.
-![1-dars_2](images/1_dars_2.png)
+![1-dars_2](1_dars_2.png)
 
 > Rasmdagi kabi rasmiy belgisi bor bot haqiqiy [@BotFather](https://t.me/BotFather) hisoblanadi.
 ![1-dars]
