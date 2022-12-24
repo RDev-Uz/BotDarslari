@@ -17,7 +17,7 @@ Biz Telegram Botni dasturlash uchun [Aiogram](https://github.com/aiogram/aiogram
 - Katta community(jamoa) tomonidan qo'llab-quvvatlanishi;
 - O'rganish va muammolarni bartaraf etish uchun ko'plab manbalar mavjudligi.
 ----------
-![1-dars-pypi.org](images/2_dars_pypi.png)
+![1-dars-pypi.org](2_dars_pypi.png)
 
 Hozirda aiogramning eng oxirgi versiyasi 2.23.1([2.x](https://docs.aiogram.dev/en/latest/)) hisoblanadi. Bundan tashqari aiogramning [3.x](https://docs.aiogram.dev/en/dev-3.x/) versiyasi ham bor,u hozirda beta(sinov) versiya bo'lganligi uchun aiogramning [2.x](https://docs.aiogram.dev/en/latest/) versiyasidan foydalanishga qaror qildik.
 
