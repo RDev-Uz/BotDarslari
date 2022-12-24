@@ -1,28 +1,39 @@
-# Telegram Bot (1-dars)
+# Telegram bot tuzamiz! (Python dasturlash tilida)
 
-![1-dars_1](1_dars_1.webp)
+Ushbu maqolamizda biz siz bilan python dasturlash tilida qanday qilib telegram bot tuzish mumkinligini ko'rib chiqamiz. Buning uchun sizga python dasturlash tilini kamida boshlang'ich darajada bilish va Telegram Botni tuzishni o'rganish uchun xohish kerak bo'ladi.
 
-<!-- ---------- -->
+Telegram botni aslida barcha https so'rov yuborsa bo'ladigan dasturlash tillarida tuzsa bo'ladi(Php, Go, Python, Rust, JavaScript(Node.JS), Java va [boshqalar](https://core.telegram.org/bots/samples)). Biz Python dasturlash tilida telegram bot tuzishni ko'ramiz, buning sababi esa hozirda ushbu ommalashgan va o'rganishga oson dasturlash tilaridan biri. 
+
+Keling avval barcha botlar qanday ishlashini bilib olsak:
+
+Barcha botlar [Telegram Bot API](https://core.telegram.org/bots/api)'dagi metodlar orqali ishlaydi. [Telegram Bot API](https://core.telegram.org/bots/api)'da qanday metodlar borligi va ularning argumentlari bilan tanishib chiqishingiz mumkin.
+
+Telegram Botni dasturlash oson bo'lishi uchun Python dasturlash tilida ko'plab kutubxonalar(modullar) mavjud bo'lib,ulardan eng mashhurlari [aiogram](https://github.com/aiogram/aiogram), [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot), [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) hisoblanadi.
+
+Biz Telegram Botni dasturlash uchun [Aiogram](https://github.com/aiogram/aiogram) kutubxonasidan foydalanamiz. Quyida ushbu kutubxonaning boshqalaridan ustun jihatlari bilan tanishishingiz mumkin: 
+
+- Asinxronligi([async](https://en.wikipedia.org/wiki/Async/await)); 
+- Telegram Bot API'dagi yangi metodlar/o'zgarishlar tezkor qo'shilishi bilan;
+- Katta community(jamoa) tomonidan qo'llab-quvvatlanishi;
+- O'rganish va muammolarni bartaraf etish uchun ko'plab manbalar mavjudligi.
+----------
+![1-dars-pypi.org](images/2_dars_pypi.png)
+
+Hozirda aiogramning eng oxirgi versiyasi 2.23.1([2.x](https://docs.aiogram.dev/en/latest/)) hisoblanadi. Bundan tashqari aiogramning [3.x](https://docs.aiogram.dev/en/dev-3.x/) versiyasi ham bor,u hozirda beta(sinov) versiya bo'lganligi uchun aiogramning [2.x](https://docs.aiogram.dev/en/latest/) versiyasidan foydalanishga qaror qildik.
 
 
-## Ushbu maqolamizda siz bilan quyidagilarni ko'rib chiqamiz:
+Botni kodini yozishga kirishishdan oldin [vertual muhut](https://docs.python.org/3/library/venv.html)(venv) yaratib olamiz:
+```console
+python3 -m venv venv
+```
+Yaratgan vertual muhutimizni aktivlashtirib olamiz.
 
-- Telegram Bot nima?
-- Qanday qilib telegram bot ochish mumkin?
-- Botni sozlash
+Windows:
+```console
+venv\Scripts\activate.bat
 
-<!-- ## **Telegram Bot nima?** -->
-
-## **Qanday qilib telegram bot ochish mumkin?**
-1. Dastlab [@BotFather](https://t.me/BotFather)'ni telegramdagi qidiruv qismidan qidirib olamiz.
-![1-dars_2](1_dars_2.png)
-
-> Rasmdagi kabi rasmiy belgisi bor bot haqiqiy [@BotFather](https://t.me/BotFather) hisoblanadi.
-![1-dars]
-2. Botga kirganingizdan so'ng "Запустить" (Boshlash,Start) tugmasini bosing.
-> Bunga javoban bot sizga botdagi mavjud buyruqlarni yuboradi.
-3. "`/newbot`" buyrug'ini yuboring.
-4. O'chmoqchi bo'lgan botingizni nomini kiriting;
-5. O'chmoqchi bo'lgan botingizning username'ni kiriting;
-> Bot username'mining oxiri bot so'zi bilan tugashi shart!
-6. Bot muvvaffaqiyatli ochilgan bo'lsa BotFather sizga botingiz tokenini yuboradi,aks xolda siz kiritgan username band bo'lganligi uchun,boshqa username kiritishingizni so'raydi.
+```
+Linux:
+```console
+source venv/bin/activate
+```
