@@ -120,7 +120,7 @@ Keling endi kodimizni ishga tushirib, botimizni sinab ko'ramiz:
 
 ![2_dars_1](/images/2_dars_1.png)
 
-> To'liq kod: [havola]()
+> To'liq kod: [havola](https://github.com/RDev-Uz/BotDarslari/blob/main/code/2dars_1.py)
 
 Matnlarni formatlash bo'yicha to'liqroq quyidagi havola orqali tanishib chiqishingiz mumkin: [havola](https://core.telegram.org/bots/api#formatting-options)
 
