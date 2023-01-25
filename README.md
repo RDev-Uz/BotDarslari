@@ -1,5 +1,3 @@
-# **1-dars (kirish)**
-
 Assalomu Alaykum. Ushbu kursimizda siz bilan python dasturlash tilida, aiogram frameworkida Telegram Bot tuzishni o'rganamiz. 
 
 Aiogram python dasturlash tilida Telegram Bot yozish uchun eng mashhur frameworklardan biri hisoblanadi. Ushbu framework ham boshqa Telegram Bot tuzish uchun mo'ljallangan kutubxona/framework lar kabi [Telegram Bot API](https://core.telegram.org/bots/api)'dan kelayotgan yangilanishlarni olish ([GetUpdates](https://core.telegram.org/bots/api#getupdates)) va foydalanuvchilarga javob qaytarish uchun ishlab chiqilgan bo'lib,katta jamoa(community) tomonidan rivojlantirib kelinmoqda.
@@ -97,7 +95,7 @@ Botimiz muvaffaqiyatli ishga tushganidan so'ng keling uni ishlatib ko'ramiz:
 Biz siz bilan foydalanuvchi ```/start``` buyrug'ini jo'natsa unga **Assalomu alaykum!** deb xabar jo'natadigan va har qanday matnli xabar jo'natsa, usha matnli xabarini o'ziga javoban qaytaradigan kichik bot qildik. Shu o'rinda aytib o'tish kerakki ```/start```ga bot bizga jo'natgan xabar **oddiy xabar** hisoblanadi, har-qanday matn jo'natsak bizning xabarimizga javoban jo'natgani esa **reply xabar** hisoblanadi. 
 
 # **Xabarlar bilan ishlash**
-### Matnlarni farmatlash <br>
+### Matnlarni formatlash <br>
 Telegram bot orqali foydalanuvchilarga jo'natilayotgan xabarlarni formatlab jo'natish imkoniyati mavjud bo'lib, textlarni ajralib turadigan va chiroyliroq qilib jo'natish imkonini beradi. Ushbu formatlash bizga botimiz orqali foydalanuvchilarga **bold**, _italic_, <u>underline</u>, <s>strikethrough</s>, `code`, [url](# "havola") va spoiler(ustiga bosilmagunigacha ko'rinmaydigan) ko'rinishidagi matnlarni jo'nata olamiz. Formatlash uchun 3xil format mavjud: HTML, Markdown va MarkdownV2. Bulardan asosan foydalanadiganlar HTML va Markdown2 hisoblanadi. Shuning uchun biz siz bilan shu ikki usulda matnlarni formatlab jo'natishni ko'rib chiqamiz. Quyidagi kodni birinchi bo'limda yozgan kodimizga `/start` uchun yozilgan handler'dan kegin qo'shib olamiz:
 ```python
 @dp.message_handler(commands=['format'])
@@ -130,7 +128,7 @@ bot = Bot("BOT_TOKEN",parse_mode=types.ParseMode.HTML)
 
 ### Media fayllar
 
-Telegram Bot orqali nafaqat matnlar bilan ishlash, shu bilan bir qatorda rasmlar,  giflar, videolar, audiolar, stickerlar, geolokatsiyalar va hokazolar bilan ishlash mumkin. Ko'plab media fayllar o'zining `file_id` va `file_unique_id`siga ega. `file_id` bitta mediafaylni ko'p martta tezkor yuborish uchun foydalanilishi mumkin. Tezkor yuborish mumkinligining sababi ushbu fayl allaqachon Telegram serverlarida mavjudligidur. Botlarda media fayllarni yuborish uchun ushbu usuldan foydalanish tavsiya etiladi. Masalan, quyidagi kod foydalanuvchidan kelgan animatsiya'ni o'ziga bir zumda `file_id`si orqali qaytaradi:
+Telegram Bot orqali nafaqat matnlar bilan ishlash, shu bilan bir qatorda rasmlar,  giflar, videolar, audiolar, stickerlar, geolokatsiyalar va hokazolar bilan ishlash mumkin. Barcha media fayllar o'zining `file_id` va `file_unique_id`siga ega. `file_id` bitta mediafaylni ko'p martta tezkor yuborish uchun foydalanilishi mumkin. Tezkor yuborish mumkinligining sababi ushbu fayl allaqachon Telegram serverlarida mavjudligidur. Botlarda media fayllarni yuborish uchun ushbu usuldan foydalanish tavsiya etiladi. Masalan, quyidagi kod foydalanuvchidan kelgan animatsiya'ni o'ziga bir zumda `file_id`si orqali qaytaradi:
 
 ```python
 # Foydalanuvchidan kelayotgan sticker'ni "ushlab" olish uchun handler
@@ -142,7 +140,7 @@ async def return_anim(message: types.Message):
 Natija:
 ![1_dars_2](/images/2_dars_2.png)
 
-> `file_id` har bir Telegram Bot uchun unikal bo'ladi,yani bitta bot orqali olingan `file_id` boshqa bot uchun ishlamaydi. `file_unique_id` esa biror bir media fayl uchun boshqa botlarda ham o'zgarmas identifikator hisoblanadi, `file_unique_id` orqali mediafayllarni jo'natib bo'lmaydi.
+> `file_id` har bir Telegram Bot uchun unikal bo'ladi, yani bitta bot orqali olingan `file_id` boshqa bot uchun ishlamaydi. `file_unique_id` esa biror bir media fayl uchun boshqa botlarda ham o'zgarmas identifikator hisoblanadi, `file_unique_id` orqali mediafayllarni jo'natib bo'lmaydi.
 ----------
 Aiogramda foydalanuvchidan kelgan media fayllar va fayllarni yuklash uchun `download()` funksiyasi mavjud,namuna uchun kod:
 ```python
@@ -206,7 +204,7 @@ Endi kodni qayta ishga tushirib, natijani ko'ramiz:
 
 Ko'rib turganingizdek tugmalar kichyardi va bir qatorda bo'ldi.
 
-Endi keling, ushbu tugmalarni foydalanuvchi bosganda unga javob beradigan qilamiz. Yoqorida aytib o'tganimizdek foydalanuvchi oddiy tugmani bosganida ushbu tugma botga matndek keladi, shuning uchun biz **Yaxshi** va **Yomon** matnlarini handlerda "ushlab" olishimiz kerak. Ma'lum bir matnni "ushlab" olish uchun handlerda aiogram'da `Text` filteri mavjud:
+Ushbu tugmalarni foydalanuvchi bosganda unga javob beradigan qilish qoldi. Yoqorida aytib o'tganimizdek foydalanuvchi oddiy tugmani bosganida ushbu tugma botga matndek keladi, shuning uchun biz **Yaxshi** va **Yomon** matnlarini handlerda "ushlab" olishimiz kerak. Ma'lum bir matnni "ushlab" olish uchun handlerda aiogram'da `Text` filteri mavjud:
 ```python
 from aiogram.dispatcher.filters import Text
 
@@ -436,4 +434,4 @@ Ushbu maqolamizda biz siz bilan qanday qilib aiogram frameworkida Telegram bot t
 > Ushbu darslikda kod asosan bitta faylda yozildi (`main.py`). Kodingiz optimalroq, chunarliroq va chalkash bo'lmasligi uchun aiogramda botlarni yozishni optimallashtirish uchun tuzilgan maxsus shablon(template)dan foydalanish tavsiya etiladi. Ushbu shablonlar orasidan sizga ushbu shablonni tavsiya etaman: [link](https://github.com/Tishka17/tgbot_template).
 
 
-## *E'tiboringiz uchun rahmat, maqola sizga foydali bo'ldi deb o'ylaymiz!*
+## *E'tiboringiz uchun rahmat, maqola sizga foydali bo'ldi deb o'ylayman!*
