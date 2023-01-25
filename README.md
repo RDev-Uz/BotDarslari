@@ -1,8 +1,8 @@
 # **1-dars (kirish)**
 
-Assalomu Alaykum. Ushbu kursimizda siz bilan python dasturlash tilida, aiogram kutubxonasida Telegram Bot tuzishni o'rganamiz. 
+Assalomu Alaykum. Ushbu kursimizda siz bilan python dasturlash tilida, aiogram frameworkida Telegram Bot tuzishni o'rganamiz. 
 
-Aiogram python dasturlash tilida Telegram Bot yozish uchun eng mashhur kutubxonalardan biri hisoblanadi. Ushbu kutubxona ham boshqa Telegram Bot tuzish uchun mo'ljallangan kutubxonalar kabi [Telegram Bot API](https://core.telegram.org/bots/api)'dan kelayotgan yangilanishlarni olish ([GetUpdates](https://core.telegram.org/bots/api#getupdates)) va foydalanuvchilarga javob qaytarish uchun ishlab chiqilgan bo'lib,katta jamoa(community) tomonidan rivojlantirib kelinmoqda.
+Aiogram python dasturlash tilida Telegram Bot yozish uchun eng mashhur frameworklardan biri hisoblanadi. Ushbu framework ham boshqa Telegram Bot tuzish uchun mo'ljallangan kutubxona/framework lar kabi [Telegram Bot API](https://core.telegram.org/bots/api)'dan kelayotgan yangilanishlarni olish ([GetUpdates](https://core.telegram.org/bots/api#getupdates)) va foydalanuvchilarga javob qaytarish uchun ishlab chiqilgan bo'lib,katta jamoa(community) tomonidan rivojlantirib kelinmoqda.
 
 ### Kursimiz uchun sizga kerak bo'ladi:
 - Kamida Python'ning 3.7 versiyasi o'rnatilgan bo'lishi;
@@ -39,7 +39,7 @@ Bot muvvaffaqiyatli ochilgan bo'lsa BotFather sizga shunday xabar jo'natadi:
 
 
 ## **Kirish qismi**
-Keling avval bizga kerakli kutubxonani, yani Aiogram'ni o'rnatib olamiz:
+Keling avval bizga kerakli frameworkni, yani Aiogram'ni o'rnatib olamiz:
 ```console
 pip install aiogram
 ```
@@ -81,11 +81,11 @@ if __name__ == '__main__':
 
 Keling endi yuqoridagi kodga biroz to'xtalib o'tsak:
 
-E'tibor bergan bo'lsangiz aiogram asinxron([async](https://docs.python.org/3/library/asyncio-task.html "async haqida ma'lumot")) kutubxona hisoblanadi. Shuning uchun funksiyadan oldin ```async```, [Telegram Bot API](https://core.telegram.org/bots/api "Telegram Bot API")'dagi metodlarga murojaat qilishdan avval esa ```await``` qo'shib yoziladi.
+E'tibor bergan bo'lsangiz aiogram asinxron([async](https://docs.python.org/3/library/asyncio-task.html "async haqida ma'lumot")) framework hisoblanadi. Shuning uchun funksiyadan oldin ```async```, [Telegram Bot API](https://core.telegram.org/bots/api "Telegram Bot API")'dagi metodlarga murojaat qilishdan avval esa ```await``` qo'shib yoziladi.
 
 Foydalanuvchidan kelayotgan xabarlarni "ushlab" olish uchun [dekoratordan](https://mohirdev.uz/pythonda-decoratorlar/ "Dekorator haqida ma'lumot") foydalaniladi va handler yoziladi, handlerning ichiga esa sharti yoziladi. Handler'ning ichidagi sharti bizga foydalanuvchidan kelayotgan xabarni tekshirishga, agar biz yozgan shartga to'g'ri kelsa tagidagi funksiyaga o'tkazib yuborishi uchun kerak bo'ladi.
 
-Hozir shunchaki yuzaki tushuntirdik, kursimiz davomida InshaAlloh ko'proq tushunchaga ega bo'lasiz. Keling endi yuqiridagi kodni run qilib ko'ramiz, agar botimiz muvaffaqiyatli ishga tushirilsa terminalga run qilganimizdan shunga o'xshash yozuv chiqadi:
+Hozir shunchaki yuzaki tushuntirdik, kursimiz davomida InshaAlloh ko'proq tushunchaga ega bo'lasiz. Keling endi yuqoridagi kodni run qilib ko'ramiz, agar botimiz muvaffaqiyatli ishga tushirilsa terminalga run qilganimizdan shunga o'xshash yozuv chiqadi:
 ```console
 INFO:aiogram:Bot: TexnoKun.Uz uchun [@TexnoKunUzBot]
 WARNING:aiogram:Updates were skipped successfully.
@@ -210,7 +210,7 @@ Endi keling, ushbu tugmalarni foydalanuvchi bosganda unga javob beradigan qilami
 ```python
 from aiogram.dispatcher.filters import Text
 
-@dp.message_handler(Text("Yaxshi"))
+@dp.message_handler(Text("Yaxshi")) # yoki text="Yaxshi"
 async def good(message: types.Message):
     await message.reply("Kayfiyatingiz yaxshi ekanligidan xursandman :)")
 
@@ -426,14 +426,14 @@ Ko'rib turganingizdek muammosiz ishlamoqda.
 
 ## **Maqola oxiri**
 
-Ushbu maqolamizda biz siz bilan qanday qilib aiogram kutubxonasida Telegram bot tuzish bo'yicha kichik bo'lsada foydali bilimlarni ulashdik deb o'ylayman. To'g'ri, ushbu maqolada kamchiliklar va yetishmovchiliklar bo'lishi mumkin, ushbu kamchiliklar uchun uzur. Ushbu kamchilik va yetishmovchiliklarda sizga [google](https://google.com) va [youtube](https://youtube.com) yaqindan yordam beradi deb o'ylaymiz. 
+Ushbu maqolamizda biz siz bilan qanday qilib aiogram frameworkida Telegram bot tuzish bo'yicha kichik bo'lsada foydali bilimlarni ulashdik deb o'ylayman. To'g'ri, ushbu maqolada kamchiliklar va yetishmovchiliklar bo'lishi mumkin, ushbu kamchiliklar uchun uzur so'rayman. Ushbu kamchilik va yetishmovchiliklarda sizga [google](https://google.com) va [youtube](https://youtube.com) yaqindan yordam beradi deb o'ylayman. 
 
 
 ## Foydalanilgan manbalar: 
 - [Aiogram Docs(Examples)](https://docs.aiogram.dev/en/latest/examples/index.html); 
 - [MasterGroosha.github.io](https://mastergroosha.github.io/aiogram-2-guide/).
 
-> Ushbu darslikda kod asosan bitta faylda yozildi (`main.py`). Kodingiz optimalroq, chunarliroq va chalkash bo'lmasligi uchun aiogram botlar uchun tuzilgan maxsus shablon(template)dan foydalanish tavsiya etiladi. Ushbu shablonlar orasidan sizga ushbu shablonni tavsiya etamiz: [link](https://github.com/Tishka17/tgbot_template).
+> Ushbu darslikda kod asosan bitta faylda yozildi (`main.py`). Kodingiz optimalroq, chunarliroq va chalkash bo'lmasligi uchun aiogramda botlarni yozishni optimallashtirish uchun tuzilgan maxsus shablon(template)dan foydalanish tavsiya etiladi. Ushbu shablonlar orasidan sizga ushbu shablonni tavsiya etaman: [link](https://github.com/Tishka17/tgbot_template).
 
 
 ## *E'tiboringiz uchun rahmat, maqola sizga foydali bo'ldi deb o'ylaymiz!*
