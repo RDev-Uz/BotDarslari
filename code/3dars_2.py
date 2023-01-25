@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 # Bot obyekti
-bot = Bot(token="5877758914:AAHji8ugLFHJ7Co7rAj1P8BRq_PyPmLSgYQ")
+bot = Bot(token="API_TOKEN")
 # Bot uchun dispetcher
 dp = Dispatcher(bot)
 
