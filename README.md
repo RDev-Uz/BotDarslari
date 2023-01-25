@@ -1,3 +1,6 @@
+# **Telegram bot tuzishni o'rganamiz**
+
+
 Assalomu Alaykum. Ushbu kursimizda siz bilan python dasturlash tilida, aiogram frameworkida Telegram Bot tuzishni o'rganamiz. 
 
 Aiogram python dasturlash tilida Telegram Bot yozish uchun eng mashhur frameworklardan biri hisoblanadi. Ushbu framework ham boshqa Telegram Bot tuzish uchun mo'ljallangan kutubxona/framework lar kabi [Telegram Bot API](https://core.telegram.org/bots/api)'dan kelayotgan yangilanishlarni olish ([GetUpdates](https://core.telegram.org/bots/api#getupdates)) va foydalanuvchilarga javob qaytarish uchun ishlab chiqilgan bo'lib,katta jamoa(community) tomonidan rivojlantirib kelinmoqda.
